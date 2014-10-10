@@ -7,6 +7,10 @@ if ("command not found" in stdoutdata):
   print("cordova not installed :(");
   sys.exit(1)
 
+if ("Current working directory is not a Cordova-based project." in stdoutdata):
+  print("not a cordova project ;(");
+  sys.exit(1)
+
 if ("No plugins added" in stdoutdata):
   print("all plugins have been removed :)");
   sys.exit(1)
